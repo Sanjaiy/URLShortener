@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>URL Shortener</title>
+  </head>
+  <body class="bg-light">
+    <div class="container my-4">
+      <h1>URL Shortener</h1>
+      <form action="/shortURL" method="POST" class="my-4 form-inline">
+        <label for="FullURL" class="sr-only">URL</label>
+        <input
+          type="url"
+          name="FullURL"
+          id="FullURL"
+          placeholder="URL"
+          required
+          class="form-control mr-2 col"
+        />
+        <button class="btn btn-success" type="submit">Shorten</button>
+      </form>
+      <table class="table table-striped table-hover table-responsive">
+        <thead>
+          <tr>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th>Clicks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="hhtps://courses.webdevsimplified.com"
+                >hhtps://courses.webdevsimplified.com</a
+              >
+            </td>
+            <td><a href="/123e124g">123e124g</a></td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
