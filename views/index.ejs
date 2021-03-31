@@ -33,18 +33,26 @@
             <th>Full URL</th>
             <th>Short URL</th>
             <th>Clicks</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
+          <% shorturl.forEach(url => { %>
           <tr>
             <td>
-              <a href="hhtps://courses.webdevsimplified.com"
-                >hhtps://courses.webdevsimplified.com</a
-              >
+              <a href="<%= url.full %>"> <%= url.full %> </a>
             </td>
-            <td><a href="/123e124g">123e124g</a></td>
-            <td>10</td>
+            <td>
+              <a href="<%= url.short %>"> <%= url.short %> </a>
+            </td>
+            <td><%= url.clicks %></td>
+            <td>
+              <form action="<%= url.short%>" method="POST">
+                <input type="submit" value="X" class="btn btn-danger py-0" />
+              </form>
+            </td>
           </tr>
+          <% }); %>
         </tbody>
       </table>
     </div>
